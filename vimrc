@@ -79,7 +79,8 @@ set softtabstop=4
 set expandtab
  
 "Set the color theme to be used 
-colors morning
+"colors Zenburn 
+colorscheme zenburn
 
 "setup minibufexplorer
 let g:miniBufExplMapWindowNavVim = 1
@@ -148,7 +149,8 @@ fun! SetupVAM()
   exec 'set runtimepath+='.vam_install_path.'/vim-addon-manager'
 
   " Tell VAM which plugins to fetch & load:
-  call vam#ActivateAddons(['ack', 'The_NERD_tree','Tagbar', 'bufexplorer.zip','Conque_Shell','vim-coffee-script','Wombat','mayansmoke','SuperTab%182', 'Command-T', 'snipmate', 'vim-ipython'], {'auto_install' : 1})
+  call vam#ActivateAddons(['ack', 'The_NERD_tree','Tagbar', 'bufexplorer.zip','Conque_Shell','vim-coffee-script','Wombat','mayansmoke','SuperTab%182', 'Command-T', 'snipmate', 'vim-ipython', 'taglist'], {'auto_install' : 1})
+  call vam#ActivateAddons(['Zenburn', 'Solarized'], {'auto_install':1})
   " sample: call vam#ActivateAddons(['pluginA','pluginB', ...], {'auto_install' : 0})
 
   " Addons are put into vam_install_path/plugin-name directory
@@ -174,4 +176,7 @@ set nobackup
 set scrolloff=3
 set ruler
 set scrolljump=5
+
+map <c-d> :NERDTreeToggle<cr>
+
 
