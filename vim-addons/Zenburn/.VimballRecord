@@ -1,1 +1,0 @@
-zenburn.vba: call delete('/home/blake/.vim/vim-addons/Zenburn/colors/zenburn.vim')
