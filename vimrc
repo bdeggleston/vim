@@ -80,7 +80,7 @@ set expandtab
  
 "Set the color theme to be used 
 "colors Zenburn 
-colorscheme zenburn
+colorscheme slate
 
 "setup minibufexplorer
 let g:miniBufExplMapWindowNavVim = 1
