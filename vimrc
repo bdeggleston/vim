@@ -78,9 +78,6 @@ set shiftwidth=4
 set softtabstop=4 
 set expandtab
  
-"Set the color theme to be used 
-"colors Zenburn 
-colorscheme slate
 
 "setup minibufexplorer
 let g:miniBufExplMapWindowNavVim = 1
@@ -176,7 +173,15 @@ set nobackup
 set scrolloff=3
 set ruler
 set scrolljump=5
+set wildignore+=*.pyc,*.pyo
 
-map <c-d> :NERDTreeToggle<cr>
+" Set ctrl space to autocomplete
+inoremap <C-Space> <C-p>
 
+map <C-A> :NERDTreeToggle<cr>
+map <C-D> :TagbarToggle<cr>
+
+"Set the color theme to be used 
+"colors Zenburn 
+colorscheme zenburn 
 
