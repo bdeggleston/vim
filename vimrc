@@ -177,8 +177,8 @@ set wildignore+=*.pyc,*.pyo
 " Set ctrl space to autocomplete
 inoremap <C-Space> <C-p>
 
-map <C-A> :NERDTreeToggle<cr>
-map <C-D> :TagbarToggle<cr>
+map <a-a> :NERDTreeToggle<cr>
+map <a-d> :TagbarToggle<cr>
 
 "Set the color theme to be used 
 "colors Zenburn 
