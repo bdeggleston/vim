@@ -90,7 +90,6 @@ let Tlist_Ctags_Cmd="/usr/bin/etags"
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 
 set expandtab
-set textwidth=79
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
