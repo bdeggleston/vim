@@ -181,6 +181,21 @@ inoremap <C-Space> <C-p>
 
 map <C-h> :NERDTreeToggle<cr>
 map <C-l> :TagbarToggle<cr>
+inoremap <F4> import ipdb; ipdb.set_trace()
+nnoremap <F4> oimport ipdb; ipdb.set_trace()<ESC>
+
+noremap <up> <nop>
+noremap <down> <nop>
+noremap <right> <nop>
+noremap <left> <nop>
+
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <right> <nop>
+inoremap <left> <nop>
+
+set foldmethod=indent
+set foldlevel=999
 
 "Set the color theme to be used 
 "colors Zenburn 
