@@ -89,12 +89,19 @@ let Tlist_Ctags_Cmd="/usr/bin/etags"
 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 
+" setup markdown
+let g:vim_markdown_folding_disabled=1
+
 set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set autoindent
 :syntax on
+
+autocmd BufRead,BufNewFile *.sls set tabstop=2
+autocmd BufRead,BufNewFile *.sls set softtabstop=2
+autocmd BufRead,BufNewFile *.sls set shiftwidth=2
 
 fun! EnsureVamIsOnDisk(vam_install_path)
   " windows users may want to use http://mawercer.de/~marc/vam/index.php
@@ -146,10 +153,11 @@ fun! SetupVAM()
 
   " Tell VAM which plugins to fetch & load:
   call vam#ActivateAddons(['ack', 'The_NERD_tree','Tagbar', 'bufexplorer.zip','Conque_Shell','vim-coffee-script'], {'auto_install' : 1})
-  call vam#ActivateAddons(['Wombat','mayansmoke','SuperTab%182', 'Command-T', 'snipmate', 'vim-ipython', 'taglist'], {'auto_install' : 1})
+  " call vam#ActivateAddons(['Wombat','mayansmoke','SuperTab%182', 'Command-T', 'snipmate', 'vim-ipython', 'taglist'], {'auto_install' : 1})
+  call vam#ActivateAddons(['Wombat','mayansmoke','SuperTab%182', 'vim-ipython', 'taglist'], {'auto_install' : 1})
   call vam#ActivateAddons(['surround'], {'auto_install' : 1})
-  call vam#ActivateAddons(['jedi-vim'], {'auto_install' : 1})
-  call vam#ActivateAddons(['Zenburn', 'Solarized'], {'auto_install':1})
+  " call vam#ActivateAddons(['jedi-vim'], {'auto_install' : 1})
+  call vam#ActivateAddons(['Zenburn', 'Solarized', 'instant-markdown'], {'auto_install':1})
   " sample: call vam#ActivateAddons(['pluginA','pluginB', ...], {'auto_install' : 0})
 
   " Addons are put into vam_install_path/plugin-name directory
@@ -178,8 +186,8 @@ set scrolljump=5
 set wildignore+=*.pyc,*.pyo
 
 " Set ctrl space to autocomplete
-""inoremap <C-Space> <C-p>
-inoremap <A-Space> <C-p>
+inoremap <C-Space> <C-p>
+"inoremap <A-Space> <C-p>
 
 map <C-h> :NERDTreeToggle<cr>
 map <C-l> :TagbarToggle<cr>
