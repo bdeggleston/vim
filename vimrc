@@ -152,7 +152,7 @@ fun! SetupVAM()
   exec 'set runtimepath+='.vam_install_path.'/vim-addon-manager'
 
   " Tell VAM which plugins to fetch & load:
-  call vam#ActivateAddons(['ack', 'The_NERD_tree','Tagbar', 'bufexplorer.zip','Conque_Shell','vim-coffee-script'], {'auto_install' : 1})
+  call vam#ActivateAddons(['ack', 'The_NERD_tree','Tagbar', 'bufexplorer.zip','vim-coffee-script'], {'auto_install' : 1})
   " call vam#ActivateAddons(['Wombat','mayansmoke','SuperTab%182', 'Command-T', 'snipmate', 'vim-ipython', 'taglist'], {'auto_install' : 1})
   call vam#ActivateAddons(['Wombat','mayansmoke','SuperTab%182', 'vim-ipython', 'taglist'], {'auto_install' : 1})
   call vam#ActivateAddons(['surround'], {'auto_install' : 1})
